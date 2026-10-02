@@ -1,0 +1,35 @@
+persona{
+    nombre
+    apellido
+    alias
+    email
+    pais
+    estado
+    preferencias[]
+    idiomaHablado []
+    idiomaAprendido []
+    personasBloqueadas []
+    conversaciones[]
+}
+
+idioma{
+    nombre
+    codigo
+}
+
+catalogo{
+    persona.alias
+    idioma.codigo
+    nivelHablado
+    nivelAprendido
+}
+
+preferencias{
+    persona
+    compatibles[]
+    noMolestar
+}
+bloquear{
+    id
+    persona : Persona
+}
